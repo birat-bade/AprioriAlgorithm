@@ -1,0 +1,24 @@
+column,item,frequency,support,combined
+Activity,1,902,0.8461538461538461,Activity=1
+Previous 24 hour flare activity code,1,1028,0.9643527204502814,Previous 24 hour flare activity code=1
+Pass across the sun's disk,2,933,0.875234521575985,Pass across the sun's disk=2
+Area,1,1039,0.974671669793621,Area=1
+Area of the largest spot,1,1066,1.0,Area of the largest spot=1
+Pass across the sun's disk|Area,2|1,906,0.849906191369606,Pass across the sun's disk=2|Area=1
+Pass across the sun's disk|Previous 24 hour flare activity code,2|1,895,0.8395872420262664,Pass across the sun's disk=2|Previous 24 hour flare activity code=1
+Pass across the sun's disk|Area of the largest spot,2|1,933,0.875234521575985,Pass across the sun's disk=2|Area of the largest spot=1
+Activity|Area,1|1,894,0.8386491557223265,Activity=1|Area=1
+Activity|Previous 24 hour flare activity code,1|1,899,0.8433395872420263,Activity=1|Previous 24 hour flare activity code=1
+Activity|Area of the largest spot,1|1,902,0.8461538461538461,Activity=1|Area of the largest spot=1
+Area|Previous 24 hour flare activity code,1|1,1010,0.9474671669793621,Area=1|Previous 24 hour flare activity code=1
+Area|Area of the largest spot,1|1,1039,0.974671669793621,Area=1|Area of the largest spot=1
+Previous 24 hour flare activity code|Area of the largest spot,1|1,1028,0.9643527204502814,Previous 24 hour flare activity code=1|Area of the largest spot=1
+Pass across the sun's disk|Area|Previous 24 hour flare activity code,2|1|1,877,0.8227016885553471,Pass across the sun's disk=2|Area=1|Previous 24 hour flare activity code=1
+Pass across the sun's disk|Area|Area of the largest spot,2|1|1,906,0.849906191369606,Pass across the sun's disk=2|Area=1|Area of the largest spot=1
+Pass across the sun's disk|Previous 24 hour flare activity code|Area of the largest spot,2|1|1,895,0.8395872420262664,Pass across the sun's disk=2|Previous 24 hour flare activity code=1|Area of the largest spot=1
+Activity|Area|Previous 24 hour flare activity code,1|1|1,891,0.8358348968105066,Activity=1|Area=1|Previous 24 hour flare activity code=1
+Activity|Area|Area of the largest spot,1|1|1,894,0.8386491557223265,Activity=1|Area=1|Area of the largest spot=1
+Activity|Previous 24 hour flare activity code|Area of the largest spot,1|1|1,899,0.8433395872420263,Activity=1|Previous 24 hour flare activity code=1|Area of the largest spot=1
+Area|Previous 24 hour flare activity code|Area of the largest spot,1|1|1,1010,0.9474671669793621,Area=1|Previous 24 hour flare activity code=1|Area of the largest spot=1
+Pass across the sun's disk|Area|Previous 24 hour flare activity code|Area of the largest spot,2|1|1|1,877,0.8227016885553471,Pass across the sun's disk=2|Area=1|Previous 24 hour flare activity code=1|Area of the largest spot=1
+Activity|Area|Previous 24 hour flare activity code|Area of the largest spot,1|1|1|1,891,0.8358348968105066,Activity=1|Area=1|Previous 24 hour flare activity code=1|Area of the largest spot=1
