@@ -6,6 +6,7 @@ from apriori_algorithm_implementation.config import Config
 
 class Apriori:
     def __init__(self, dataset, min_support, min_confidence, min_length):
+
         self.dataset = dataset
         self.min_support = min_support
         self.min_confidence = min_confidence
@@ -37,6 +38,7 @@ class Apriori:
                     temp_df['combined'] = [column + '=' + temp_data]
 
                     self.frequency_item_set = self.frequency_item_set.append(temp_df)
+        self.frequency_item_set.to_csv(Config.output_path + Config.frequency_item_set, index=False)
 
     def evaluate_item_pair_set(self):
 
@@ -75,6 +77,8 @@ class Apriori:
                     for b in range(0, len(columns)):
                         combined.append(columns[b] + '=' + tup[b])
 
+                    combined = sorted(combined)
+
                     if support >= self.min_support:
                         temp_df = pd.DataFrame()
                         temp_df['column'] = ['|'.join(columns)]
@@ -94,54 +98,36 @@ class Apriori:
         combined = [i[0] + '|' + i[1] for i in combined_list]
         ant_support = [combined_dict.get(i[0]) for i in combined_list]
         det_support = [combined_dict.get(i[1]) for i in combined_list]
-        pair_support = [combined_dict.get(i[0] + '|' + i[1]) for i in combined_list]
+
+        # pair_support = [combined_dict.get(i[0] + '|' + i[1]) for i in combined_list]
 
         self.output['antecedent'] = ant
         self.output['consequent'] = det
         self.output['combined'] = combined
         self.output['antecedent_support'] = ant_support
         self.output['consequent_support'] = det_support
-        self.output['pair_support'] = pair_support
+        self.output['support'] = self.output.apply(get_pair_support, 1, args=[combined_dict])
 
         self.output = self.output.fillna('')
 
-        self.output = self.output[self.output['pair_support'] != '']
+        self.output = self.output[self.output['support'] != '']
 
-        print(self.output.shape)
+        self.output['confidence'] = self.output.apply(compute_confidence, 1)
 
-        self.output['confidence_antecedent_consequent'] = self.output.apply(compute_confidence_antecedent, 1)
-        self.output['confidence_consequent_antecedent'] = self.output.apply(compute_confidence_consequent, 1)
-
-        self.output = self.output[(self.output['confidence_antecedent_consequent'] >= self.min_confidence) | (
-            self.output['confidence_consequent_antecedent'] >= self.min_confidence)]
+        self.output = self.output[(self.output['confidence'] >= self.min_confidence)]
 
         self.item_pair_set.to_csv(Config.output_path + Config.item_pair_set, index=False)
 
-        self.output.to_csv(Config.output_path + 'Confidence_Matrix.csv', index=False)
+        self.output.to_csv(Config.output_path + Config.confidence_matrix, index=False)
 
-        exit()
+        print(self.output.shape)
 
-
-def compute_confidence_antecedent(row):
+      
+def compute_confidence(row):
     antecedent = row['antecedent_support']
-    pair = row['pair_support']
+    pair = row['support']
 
     confidence = pair / antecedent
-
-    if confidence < 0.75:
-        return 0.0
-
-    return confidence
-
-
-def compute_confidence_consequent(row):
-    consequent = row['consequent_support']
-    pair = row['pair_support']
-
-    confidence = pair / consequent
-
-    if confidence < 0.75:
-        return 0.0
 
     return confidence
 
@@ -150,6 +136,16 @@ def select_data(filter_lst, df):
     d = dict(filter_lst)
     res = df.loc[(df[list(d.keys())] == pd.Series(d)).all(axis=1)]
     return res
+
+
+def get_pair_support(row, args):
+    combined = row['combined']
+
+    combined = '|'.join(sorted(combined.split('|')))
+
+    pair_support = args.get(combined)
+
+    return pair_support
 
 
 def find_all_sub_sets(index, superset, sep):

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://F:/Projects/Python Projects/AprioriAlgorithmImplementation/.idea/DataMiningAssignment.iml" filepath="F:/Projects/Python Projects/AprioriAlgorithmImplementation/.idea/DataMiningAssignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DataMiningAssignment.iml" filepath="$PROJECT_DIR$/.idea/DataMiningAssignment.iml" />
     </modules>
   </component>
 </project>
