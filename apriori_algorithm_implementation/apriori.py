@@ -38,6 +38,7 @@ class Apriori:
                     temp_df['combined'] = [column + '=' + temp_data]
 
                     self.frequency_item_set = self.frequency_item_set.append(temp_df)
+
         self.frequency_item_set.to_csv(Config.output_path + Config.frequency_item_set, index=False)
 
     def evaluate_item_pair_set(self):
@@ -93,16 +94,16 @@ class Apriori:
 
         combined_dict = dict(zip(list(self.item_pair_set['combined']), list(self.item_pair_set['support'])))
 
-        ant = [i[0] for i in combined_list]
-        det = [i[1] for i in combined_list]
+        antecedent = [i[0] for i in combined_list]
+        consequent = [i[1] for i in combined_list]
         combined = [i[0] + '|' + i[1] for i in combined_list]
         ant_support = [combined_dict.get(i[0]) for i in combined_list]
         det_support = [combined_dict.get(i[1]) for i in combined_list]
 
         # pair_support = [combined_dict.get(i[0] + '|' + i[1]) for i in combined_list]
 
-        self.output['antecedent'] = ant
-        self.output['consequent'] = det
+        self.output['antecedent'] = antecedent
+        self.output['consequent'] = consequent
         self.output['combined'] = combined
         self.output['antecedent_support'] = ant_support
         self.output['consequent_support'] = det_support
@@ -112,7 +113,7 @@ class Apriori:
 
         self.output = self.output[self.output['support'] != '']
 
-        self.output['confidence'] = self.output.apply(compute_confidence, 1)
+        self.output['confidence'] = self.output.apply(lambda row: row['antecedent_support'] / row['support'], 1)
 
         self.output = self.output[(self.output['confidence'] >= self.min_confidence)]
 
@@ -122,15 +123,6 @@ class Apriori:
 
         print(self.output.shape)
 
-      
-def compute_confidence(row):
-    antecedent = row['antecedent_support']
-    pair = row['support']
-
-    confidence = pair / antecedent
-
-    return confidence
-
 
 def select_data(filter_lst, df):
     d = dict(filter_lst)
@@ -139,9 +131,7 @@ def select_data(filter_lst, df):
 
 
 def get_pair_support(row, args):
-    combined = row['combined']
-
-    combined = '|'.join(sorted(combined.split('|')))
+    combined = '|'.join(sorted(row['combined'].split('|')))
 
     pair_support = args.get(combined)
 

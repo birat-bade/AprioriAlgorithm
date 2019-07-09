@@ -1,23 +1,23 @@
 antecedent,consequent,combined,antecedent_support,consequent_support,support,confidence
-Activity=1,Area=1,Activity=1|Area=1,0.8461538461538461,0.974671669793621,0.8386491557223265,0.991130820399113
+Activity=1,Area=1,Activity=1|Area=1,0.8461538461538461,0.974671669793621,0.8386491557223265,1.0089485458612975
 Activity=1,Area of the largest spot=1,Activity=1|Area of the largest spot=1,0.8461538461538461,1.0,0.8461538461538461,1.0
-Activity=1,Area of the largest spot=1|Area=1,Activity=1|Area of the largest spot=1|Area=1,0.8461538461538461,0.974671669793621,0.8386491557223265,0.991130820399113
-Pass across the sun's disk=2,Area=1,Pass across the sun's disk=2|Area=1,0.875234521575985,0.974671669793621,0.849906191369606,0.9710610932475884
+Activity=1,Area of the largest spot=1|Area=1,Activity=1|Area of the largest spot=1|Area=1,0.8461538461538461,0.974671669793621,0.8386491557223265,1.0089485458612975
+Pass across the sun's disk=2,Area=1,Pass across the sun's disk=2|Area=1,0.875234521575985,0.974671669793621,0.849906191369606,1.0298013245033113
 Pass across the sun's disk=2,Area of the largest spot=1,Pass across the sun's disk=2|Area of the largest spot=1,0.875234521575985,1.0,0.875234521575985,1.0
-Pass across the sun's disk=2,Area of the largest spot=1|Area=1,Pass across the sun's disk=2|Area of the largest spot=1|Area=1,0.875234521575985,0.974671669793621,0.849906191369606,0.9710610932475884
-Area=1,Activity=1,Area=1|Activity=1,0.974671669793621,0.8461538461538461,0.8386491557223265,0.8604427333974977
-Area=1,Pass across the sun's disk=2,Area=1|Pass across the sun's disk=2,0.974671669793621,0.875234521575985,0.849906191369606,0.8719923002887392
+Pass across the sun's disk=2,Area of the largest spot=1|Area=1,Pass across the sun's disk=2|Area of the largest spot=1|Area=1,0.875234521575985,0.974671669793621,0.849906191369606,1.0298013245033113
+Area=1,Activity=1,Area=1|Activity=1,0.974671669793621,0.8461538461538461,0.8386491557223265,1.162192393736018
+Area=1,Pass across the sun's disk=2,Area=1|Pass across the sun's disk=2,0.974671669793621,0.875234521575985,0.849906191369606,1.1467991169977925
 Area=1,Area of the largest spot=1,Area=1|Area of the largest spot=1,0.974671669793621,1.0,0.974671669793621,1.0
-Area=1,Activity=1|Area of the largest spot=1,Area=1|Activity=1|Area of the largest spot=1,0.974671669793621,0.8461538461538461,0.8386491557223265,0.8604427333974977
-Area=1,Area of the largest spot=1|Pass across the sun's disk=2,Area=1|Area of the largest spot=1|Pass across the sun's disk=2,0.974671669793621,0.875234521575985,0.849906191369606,0.8719923002887392
-Area of the largest spot=1,Activity=1,Area of the largest spot=1|Activity=1,1.0,0.8461538461538461,0.8461538461538461,0.8461538461538461
-Area of the largest spot=1,Pass across the sun's disk=2,Area of the largest spot=1|Pass across the sun's disk=2,1.0,0.875234521575985,0.875234521575985,0.875234521575985
-Area of the largest spot=1,Area=1,Area of the largest spot=1|Area=1,1.0,0.974671669793621,0.974671669793621,0.974671669793621
-Area of the largest spot=1,Activity=1|Area=1,Area of the largest spot=1|Activity=1|Area=1,1.0,0.8386491557223265,0.8386491557223265,0.8386491557223265
-Area of the largest spot=1,Area=1|Pass across the sun's disk=2,Area of the largest spot=1|Area=1|Pass across the sun's disk=2,1.0,0.849906191369606,0.849906191369606,0.849906191369606
-Activity=1|Area=1,Area of the largest spot=1,Activity=1|Area=1|Area of the largest spot=1,0.8386491557223265,1.0,0.8386491557223265,1.0
-Activity=1|Area of the largest spot=1,Area=1,Activity=1|Area of the largest spot=1|Area=1,0.8461538461538461,0.974671669793621,0.8386491557223265,0.991130820399113
+Area=1,Area of the largest spot=1|Pass across the sun's disk=2,Area=1|Area of the largest spot=1|Pass across the sun's disk=2,0.974671669793621,0.875234521575985,0.849906191369606,1.1467991169977925
+Area=1,Activity=1|Area of the largest spot=1,Area=1|Activity=1|Area of the largest spot=1,0.974671669793621,0.8461538461538461,0.8386491557223265,1.162192393736018
+Area of the largest spot=1,Activity=1,Area of the largest spot=1|Activity=1,1.0,0.8461538461538461,0.8461538461538461,1.1818181818181819
+Area of the largest spot=1,Pass across the sun's disk=2,Area of the largest spot=1|Pass across the sun's disk=2,1.0,0.875234521575985,0.875234521575985,1.142550911039657
+Area of the largest spot=1,Area=1,Area of the largest spot=1|Area=1,1.0,0.974671669793621,0.974671669793621,1.0259865255052936
+Area of the largest spot=1,Area=1|Pass across the sun's disk=2,Area of the largest spot=1|Area=1|Pass across the sun's disk=2,1.0,0.849906191369606,0.849906191369606,1.1766004415011038
+Area of the largest spot=1,Activity=1|Area=1,Area of the largest spot=1|Activity=1|Area=1,1.0,0.8386491557223265,0.8386491557223265,1.192393736017897
+Area of the largest spot=1|Area=1,Activity=1,Area of the largest spot=1|Area=1|Activity=1,0.974671669793621,0.8461538461538461,0.8386491557223265,1.162192393736018
+Area of the largest spot=1|Area=1,Pass across the sun's disk=2,Area of the largest spot=1|Area=1|Pass across the sun's disk=2,0.974671669793621,0.875234521575985,0.849906191369606,1.1467991169977925
 Area=1|Pass across the sun's disk=2,Area of the largest spot=1,Area=1|Pass across the sun's disk=2|Area of the largest spot=1,0.849906191369606,1.0,0.849906191369606,1.0
-Area of the largest spot=1|Pass across the sun's disk=2,Area=1,Area of the largest spot=1|Pass across the sun's disk=2|Area=1,0.875234521575985,0.974671669793621,0.849906191369606,0.9710610932475884
-Area of the largest spot=1|Area=1,Activity=1,Area of the largest spot=1|Area=1|Activity=1,0.974671669793621,0.8461538461538461,0.8386491557223265,0.8604427333974977
-Area of the largest spot=1|Area=1,Pass across the sun's disk=2,Area of the largest spot=1|Area=1|Pass across the sun's disk=2,0.974671669793621,0.875234521575985,0.849906191369606,0.8719923002887392
+Activity=1|Area=1,Area of the largest spot=1,Activity=1|Area=1|Area of the largest spot=1,0.8386491557223265,1.0,0.8386491557223265,1.0
+Area of the largest spot=1|Pass across the sun's disk=2,Area=1,Area of the largest spot=1|Pass across the sun's disk=2|Area=1,0.875234521575985,0.974671669793621,0.849906191369606,1.0298013245033113
+Activity=1|Area of the largest spot=1,Area=1,Activity=1|Area of the largest spot=1|Area=1,0.8461538461538461,0.974671669793621,0.8386491557223265,1.0089485458612975
