@@ -1,2 +1,2 @@
-# AprioriAlgorithmImplementation
+# AprioriAlgorithm
 Apriori Algorithm Implementation
