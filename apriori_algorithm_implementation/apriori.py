@@ -113,12 +113,23 @@ class Apriori:
 
         self.output = self.output[self.output['support'] != '']
 
-        self.output['confidence'] = self.output.apply(lambda row: row['antecedent_support'] / row['support'], 1)
-
+        self.output['confidence'] = self.output.apply(lambda row: row['support'] / row['antecedent_support'], 1)
         self.output = self.output[(self.output['confidence'] >= self.min_confidence)]
 
-        self.item_pair_set.to_csv(Config.output_path + Config.item_pair_set, index=False)
+        self.output['centered_confidence'] = self.output.apply(lambda row:
+                                                               row['confidence'] - row['consequent_support'], 1)
 
+        self.output['lift'] = self.output.apply(
+            lambda row: row['support'] / (row['consequent_support'] * row['antecedent_support']), 1)
+
+        self.output['ganascia'] = self.output.apply(lambda row: 2 * row['confidence'] - 1, 1)
+
+        self.output['piatetsky-shapiro'] = self.output.apply(
+            lambda row: row['antecedent_support'] * (row['confidence'] - row['consequent_support']), 1)
+
+        del self.output['combined']
+
+        self.item_pair_set.to_csv(Config.output_path + Config.item_pair_set, index=False)
         self.output.to_csv(Config.output_path + Config.confidence_matrix, index=False)
 
         print(self.output.shape)
